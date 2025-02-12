@@ -1,73 +1,43 @@
 import React from "react";
-import Img2 from "../../assets/coffee2.png";
-const ServicesData = [
-  {
-    id: 1,
-    img: Img2,
-    name: "Espresso",
-    description:
-      "Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet ipsum dolor sit amet.",
-    aosDelay: "100",
-  },
-  {
-    id: 2,
-    img: Img2,
-    name: "Americano",
-    description:
-      "Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet ipsum dolor sit amet",
-    aosDelay: "300",
-  },
-  {
-    id: 3,
-    img: Img2,
-    name: "Cappuccino",
-    description:
-      "Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet ipsum dolor sit amet",
-    aosDelay: "500",
-  },
-];
+
 const Services = () => {
   return (
-    <>
-      <span id="services"></span>
-      <div className="py-10">
-        <div className="container">
-          {/* Heading section  */}
-          <div className="text-center mb-20">
-            <h1 className="text-4xl font-bold font-cursive text-gray-800">
-              Best Coffee For You
-            </h1>
-          </div>
+    <section className="py-16 px-8 md:px-16 lg:px-80 bg-white">
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Section Header */}
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Services</h2>
+        <div className="w-24 h-1 bg-yellow-500 mx-auto mt-2"></div>
+      </div>
 
-          {/* Services Card section  */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center">
-            {ServicesData.map((service) => (
-              <div
-                data-aos="fade-up"
-                data-aos-delay={service.aosDelay}
-                className="rounded-2xl bg-white hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
-              >
-                <div className="h-[122px]">
-                  <img
-                    src={service.img}
-                    alt=""
-                    className="max-w-[200px] block mx-auto transform -translate-y-14
-                  group-hover:scale-105 group-hover:rotate-6 duration-300"
-                  />
-                </div>
-                <div className="p-4 text-center">
-                  <div className="w-full "></div>
-                  <h1 className="text-xl font-bold">{service.name}</h1>
-                  <p className="text-gray-500 group-hover:text-white duration-high text-sm line-clamp-2">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+      {/* Services Grid */}
+      <div className="grid md:grid-cols-2 gap-8 mt-12">
+        {/* Left Box: Strategic Investment */}
+        <div className="bg-gray-200 p-8 rounded-lg flex justify-center items-center">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md">
+            <h3 className="text-lg font-bold text-primary">Strategic Investment</h3>
+            <p className="text-gray-700 mt-2 text-sm">
+              We focus on strategic directions with great potential and offer
+              management, financial, and operational support to our portfolio
+              companies.
+            </p>
+          </div>
+        </div>
+
+        {/* Right Box: Financial Investment */}
+        <div className="bg-gray-200 p-8 rounded-lg flex justify-center items-center">
+          <div className="max-w-md">
+            <h3 className="text-lg font-bold text-primary border-b-2 inline-block">
+              Financial Investment
+            </h3>
+            <p className="text-gray-700 mt-2 text-sm">
+              We provide comprehensive investment solutions, including angel
+              investment, venture capital, and private equity, across the full
+              lifecycle of businesses.
+            </p>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

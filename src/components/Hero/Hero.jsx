@@ -1,65 +1,34 @@
 import React from "react";
-import HeroPng from "../../assets/coffee2.png";
+import HeroBg from "../../assets/website/hero.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <>
-      <div className="min-h-[550px] sm:min-h-[600px] bg-brandDark flex justify-center items-center text-white">
-        <div className="container pb-8 sm:pb-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2">
-            {/* text content section */}
-            <div className="flex flex-col justify-center gap-6 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1">
-              <h1
-                data-aos="fade-up"
-                data-aos-once="true"
-                className="text-5xl sm:text-6xl lg:text-7xl font-bold"
-              >
-                We serve the richest{" "}
-                <span
-                  data-aos="zoom-out"
-                  data-aos-delay="300"
-                  class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/90 font-cursive"
-                >
-                  Coffee
-                </span>{" "}
-                in the city
-              </h1>
-              <div data-aos="fade-up" data-aos-delay="400">
-                <button className="bg-gradient-to-r from-primary to-secondary border-2 border-primary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
-                  Coffee And Code
-                </button>
-              </div>
-            </div>
-            {/* Image section */}
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="300"
-              className="min-h-[450px] flex justify-center items-center relative order-1 sm:order-2 "
-            >
-              <img
-                data-aos-once="true"
-                src={HeroPng}
-                alt="biryani img"
-                className="w-[300px] sm:w-[450px] sm:scale-125 mx-auto spin "
-              />
-              <div
-                data-aos="fade-left"
-                className="bg-gradient-to-r from-primary to-secondary p-3 rounded-xl absolute top-10 left-10"
-              >
-                <h1 className="text-white">Hey Coder</h1>
-              </div>
-              <div
-                data-aos="fade-right"
-                data-aos-offset="0"
-                className="bg-gradient-to-r from-primary to-secondary p-3 rounded-xl absolute bottom-10 right-10"
-              >
-                <h1 className="text-white">Best Coffee</h1>
-              </div>
-            </div>
-          </div>
+    <section
+      className="relative min-h-screen flex flex-col sm:flex-row items-center bg-cover bg-center px-4 md:px-10 lg:px-24"
+      style={{ backgroundImage: `url(${HeroBg})` }}
+    >
+      <div className="max-w-2xl p-4 sm:p-6 md:p-10 rounded-lg text-center sm:text-left">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+          Welcome to <br />
+          <span className="text-secondary">Eliashib Group</span>
+        </h1>
+
+        <p className="text-sm sm:text-lg md:text-xl text-gray-800 mt-4">
+          Your trusted partner in <strong>strategic</strong> investments and{" "}
+          <strong>innovative</strong> solutions across multiple sectors. We are committed to sustainable{" "}
+          <strong>growth</strong>, leveraging our expertise to <strong>empower</strong> businesses and drive value.
+        </p>
+
+        <div className="mt-6">
+          <Link to="/foundation">
+            <button className="px-5 sm:px-6 py-2 sm:py-3 bg-secondary text-white font-semibold text-md sm:text-lg rounded-full shadow-lg transition-transform transform hover:scale-105">
+              Foundation
+            </button>
+          </Link>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
