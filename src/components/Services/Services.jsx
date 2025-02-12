@@ -14,7 +14,7 @@ const Services = () => {
         {/* Left Box: Strategic Investment */}
         <div className="bg-gray-200 p-8 rounded-lg flex justify-center items-center">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-md">
-            <h3 className="text-lg font-bold text-primary">Strategic Investment</h3>
+            <h3 className="text-lg font-bold text-primary border-b-2 inline-block">Strategic Investment</h3>
             <p className="text-gray-700 mt-2 text-sm">
               We focus on strategic directions with great potential and offer
               management, financial, and operational support to our portfolio
