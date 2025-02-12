@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section
-      className="relative min-h-screen flex flex-col sm:flex-row items-center bg-cover bg-center px-4 md:px-10 lg:px-24"
+      className="relative min-h-screen flex flex-col sm:flex-row items-center justify-center sm:justify-start bg-cover bg-center px-4 md:px-10 lg:px-24 py-12 sm:py-20"
       style={{ backgroundImage: `url(${HeroBg})` }}
     >
-      <div className="max-w-2xl p-4 sm:p-6 md:p-10 rounded-lg text-center sm:text-left">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+      <div className="max-w-2xl p-6 sm:p-10 rounded-lg text-center sm:text-left">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-primary leading-tight">
           Welcome to <br />
           <span className="text-secondary">Eliashib Group</span>
         </h1>

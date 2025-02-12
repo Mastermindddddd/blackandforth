@@ -25,7 +25,7 @@ const Services = () => {
 
         {/* Right Box: Financial Investment */}
         <div className="bg-gray-200 p-8 rounded-lg flex justify-center items-center">
-          <div className="max-w-md">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md">
             <h3 className="text-lg font-bold text-primary border-b-2 inline-block">
               Financial Investment
             </h3>
