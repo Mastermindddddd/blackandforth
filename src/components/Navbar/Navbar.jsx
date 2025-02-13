@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/website/logo.png";
+import Logo from "/main-logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Menu = [
@@ -18,26 +18,33 @@ const Navbar = () => {
   const handleScroll = (event, targetId) => {
     event.preventDefault();
     setIsOpen(false); // Close mobile menu after clicking
-
+  
+    if (!targetId.startsWith("#")) {
+      // If it's an actual page route, navigate normally
+      window.location.href = targetId;
+      return;
+    }
+  
     const target = document.querySelector(targetId);
     if (target) {
-      const navbarHeight = document.querySelector(".navbar").offsetHeight; // Get navbar height
-      const offsetTop = target.offsetTop - navbarHeight - 10; // Adjust scroll position
-
+      const navbarHeight = document.querySelector(".navbar").offsetHeight;
+      const offsetTop = target.offsetTop - navbarHeight - 10;
+  
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth",
       });
     }
   };
+  
 
   return (
-    <div className="navbar shadow-md fixed w-full bg-white z-50 py-2">
+    <div className="navbar shadow-md fixed w-full bg-white z-50">
       <div className="container mx-auto flex justify-between items-center px-6">
         {/* Logo section */}
         <div data-aos="fade-down" data-aos-once="true">
           <a href="/" className="font-bold text-2xl sm:text-3xl flex items-center gap-2 tracking-wider">
-            <img src={Logo} alt="Logo" className="w-16 sm:w-20" />
+          <img src={Logo} alt="Logo" className="w-24 sm:w-28 h-auto" />
           </a>
         </div>
 
