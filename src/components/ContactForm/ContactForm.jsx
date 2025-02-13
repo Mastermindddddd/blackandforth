@@ -2,6 +2,18 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const ContactForm = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const url = "https://script.google.com/macros/s/AKfycbx29Rk8YK4HNbYnOb6-Gjmlv7THN7OxWoC4X33zi4q3xWfsAhLpa0ad-Z0GdCOqLZ-x/exec"
+    fetch(url,{
+      method:"POST",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body:(`Name=${e.target.name.value}&LastName=${e.target.lastname}&Email=${e.target.email.value}`)
+    }).then(res=>res.text()).then(data=>{
+      alert(data)
+    }).catch(error=>console.log(error))
+  }
   return (
     <div className="bg-black text-white flex flex-col md:flex-row items-center justify-center p-12">
       {/* Contact Info Section */}
@@ -21,26 +33,26 @@ const ContactForm = () => {
 
       {/* Contact Form Section */}
       <div className="w-full md:w-1/2 max-w-lg md:ml-8 mt-8 md:mt-0">
-        <form className="bg-black p-6">
+        <form onSubmit={handleSubmit} className="bg-black p-6">
           <div className="flex gap-4 mb-4">
             <div className="w-1/2">
               <label className="block text-sm mb-1">First Name</label>
-              <input type="text" className="w-full border border-white bg-black text-white p-2" />
+              <input type="text" name="name" className="w-full border border-white bg-black text-white p-2" />
             </div>
             <div className="w-1/2">
               <label className="block text-sm mb-1">Last Name</label>
-              <input type="text" className="w-full border border-white bg-black text-white p-2" />
+              <input type="text" name="lastname" className="w-full border border-white bg-black text-white p-2" />
             </div>
           </div>
 
           <div className="mb-4">
             <label className="block text-sm mb-1">Email *</label>
-            <input type="email" className="w-full border border-white bg-black text-white p-2" />
+            <input type="email" name="email" className="w-full border border-white bg-black text-white p-2" />
           </div>
 
           <div className="mb-4">
             <label className="block text-sm mb-1">Message</label>
-            <textarea className="w-full border border-white bg-black text-white p-2 h-24"></textarea>
+            <textarea name="message" className="w-full border border-white bg-black text-white p-2 h-24"></textarea>
           </div>
 
           <div className="flex justify-center">

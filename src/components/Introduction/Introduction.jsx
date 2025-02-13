@@ -8,7 +8,7 @@ const Introduction = () => {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Introduction</h2>
         <div className="w-16 sm:w-24 border-b-4 border-primary mx-auto"></div>
         
-        <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mt-4">
           A society’s full functionality necessitates the comprehensive addressing of 
           social, economic, and political factors in an effective manner. Our communities 
           are actively seeking effective solutions to transition from survivalism to self-sufficiency. 
@@ -18,7 +18,7 @@ const Introduction = () => {
           grassroots level and deeply embedded within the fabric of society.
         </p>
 
-        <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mt-4">
           The economic landscape is undergoing a rapid transformation, leaving many families 
           and individuals behind. This disparity further hinders societies’ ability to derive 
           economic benefits. Numerous economic development programs have failed to yield the 
