@@ -30,11 +30,12 @@ const Introduction = () => {
 
       {/* Button Section */}
       <div className="w-full max-w-4xl flex justify-end px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+      <a href="#contact-us">
         <button className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-full shadow-md hover:bg-yellow-600 transition duration-200">
           Contact Us For A Discovery Call
         </button>
+      </a>
       </div>
-
       {/* Full-width Banner Image */}
       <img 
         src="/banner.png" 

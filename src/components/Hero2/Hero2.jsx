@@ -13,7 +13,7 @@ const Hero2 = () => {
           Eliashib Foundation
         </h1>
         <div className="mt-8 sm:mt-12">
-          <a href="#contact">
+          <a href="#contact-us">
             <button className="px-6 py-3 bg-secondary text-white font-semibold text-md rounded-full shadow-lg transition-transform transform hover:scale-105">
             Contact Us
             </button>

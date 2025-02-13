@@ -10,23 +10,21 @@ import ServicesSection from "../components/Services2/Services2.jsx";
 const Foundation = () => {
   return (
     <div>
-        <Navbar2 />
-      <section id="home.." className="pt-18">
-        <Hero2 />
-      </section>
+      <Navbar2 />
+      <Hero2 />
       <section id="introduction" className="pt-18">
         <Introduction />
       </section>
-      <section id="about.." className="pt-18">
+      <section id="about" className="pt-18">
         <AboutUs2 />
       </section>
-      <section id="info.." className="pt-18">
+      <section id="info" className="pt-18">
         <InfoCards />
       </section>
-      <section id="services.." className="pt-18">
+      <section id="services" className="pt-18">
         <ServicesSection />
       </section>
-      <section id="contact-us.." className="pt-18">
+      <section id="contact-us" className="pt-18">
         <ContactForm />
       </section>
     </div>
