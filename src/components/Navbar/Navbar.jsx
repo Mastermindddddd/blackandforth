@@ -41,6 +41,7 @@ const Navbar = () => {
   return (
     <div className="navbar shadow-md fixed w-full bg-white z-50">
       <div className="container mx-auto flex justify-between items-center px-6">
+        
         <div data-aos="fade-down" data-aos-once="true">
           <a href="/" className="font-bold text-2xl sm:text-3xl flex items-center gap-2 tracking-wider">
           <img src={Logo} alt="Logo" className="w-24 sm:w-28 h-auto" />
