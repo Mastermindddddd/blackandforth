@@ -14,12 +14,29 @@ const Menu = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function to handle smooth scrolling with offset
+  const handleScroll = (event, targetId) => {
+    event.preventDefault();
+    setIsOpen(false); // Close mobile menu after clicking
+
+    const target = document.querySelector(targetId);
+    if (target) {
+      const navbarHeight = document.querySelector(".navbar").offsetHeight; // Get navbar height
+      const offsetTop = target.offsetTop - navbarHeight - 10; // Adjust scroll position
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="shadow-md fixed w-full bg-white z-50 py-2">
+    <div className="navbar shadow-md fixed w-full bg-white z-50 py-2">
       <div className="container mx-auto flex justify-between items-center px-6">
         {/* Logo section */}
         <div data-aos="fade-down" data-aos-once="true">
-          <a href="#home" className="font-bold text-2xl sm:text-3xl flex items-center gap-2 tracking-wider">
+          <a href="/" className="font-bold text-2xl sm:text-3xl flex items-center gap-2 tracking-wider">
             <img src={Logo} alt="Logo" className="w-16 sm:w-20" />
           </a>
         </div>
@@ -35,7 +52,11 @@ const Navbar = () => {
         <ul className="hidden sm:flex items-center gap-4">
           {Menu.map((menu) => (
             <li key={menu.id}>
-              <a href={menu.link} className="text-md py-2 px-4 text-gray-900 duration-200">
+              <a
+                href={menu.link}
+                onClick={(e) => handleScroll(e, menu.link)}
+                className="text-md py-2 px-4 text-gray-900 duration-200 cursor-pointer"
+              >
                 {menu.name}
               </a>
             </li>
@@ -51,7 +72,7 @@ const Navbar = () => {
               <li key={menu.id}>
                 <a
                   href={menu.link}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleScroll(e, menu.link)}
                   className="block text-md py-2 text-gray-900 w-full"
                 >
                   {menu.name}

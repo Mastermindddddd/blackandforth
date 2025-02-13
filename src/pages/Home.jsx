@@ -11,26 +11,25 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="about">
+      <Hero />
+      <section id="about" className="pt-18">
         <AboutUs />
       </section>
-      <section id="services">
+      <section id="services" className="pt-18">
         <Services />
       </section>
-      <section id="industries">
+      <section id="industries" className="pt-18">
         <Industries />
       </section>
-      <section id="testimonials">
+      <section id="testimonials" className="pt-18">
         <Testimonials />
       </section>
-      <section id="contact">
+      <section id="contact" className="pt-18">
         <ContactForm />
       </section>
     </div>
   );
 };
+
 
 export default Home;
