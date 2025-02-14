@@ -9,7 +9,7 @@ const ContactForm = () => {
     fetch(url,{
       method:"POST",
       headers: {"Content-Type": "application/x-www-form-urlencoded"},
-      body:(`Name=${e.target.name.value}&LastName=${e.target.lastname}&Email=${e.target.email.value}`)
+      body:(`Name=${e.target.name.value}&LastName=${e.target.lastname.value}&Email=${e.target.email.value}&Message=${e.target.message.value}`)
     }).then(res=>res.text()).then(data=>{
       alert(data)
     }).catch(error=>console.log(error))
