@@ -7,7 +7,7 @@ const AboutUs2 = () => {
         {/* Left Side - Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="/AboutUs2.jpg"
+            src="/AboutUs2.jpeg"
             alt="Professional Working"
             className="w-full rounded-lg shadow-lg"
           />

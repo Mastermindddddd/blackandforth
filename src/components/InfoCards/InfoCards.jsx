@@ -2,7 +2,7 @@ import React from "react";
 
 const InfoCards = () => {
     return (
-      <div className="bg-cover bg-center min-h-[500px] flex items-center justify-center px-6 py-12" style={{ backgroundImage: "url('/InfoCards.jpg')" }}>
+      <div className="bg-cover bg-center min-h-[500px] flex items-center justify-center px-6 py-12" style={{ backgroundImage: "url('/InfoCards.jpeg')" }}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl">
           {/* Skills Development Card */}
           <div className="bg-white shadow-lg rounded-xl p-6 text-center">
