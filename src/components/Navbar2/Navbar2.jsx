@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "/foundation-logo.png";
+import Logo from "/foundation-logo.webp";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Menu = [

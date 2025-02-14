@@ -30,19 +30,19 @@ const ServicesSection = () => {
 const services = [
   {
     title: "Training and Development",
-    image: "/training.jpg",
+    image: "/training.webp",
     description:
       "The advent of technology is transforming workplaces, necessitating the continuous acquisition of relevant skills. Our approach focuses on developing highly sought-after and in-demand skills with industry-agnostic applicability.",
   },
   {
     title: "Coaching and Mentorship",
-    image: "/coaching.jpg",
+    image: "/coaching.webp",
     description:
       "Mentorship and coaching are critical for individual and business growth. Our programs cater to entrepreneurs, providing technical assistance, and to organizations, fostering team cohesion and productivity.",
   },
   {
     title: "Entrepreneurship Development",
-    image: "/entrepreneurship.jpg",
+    image: "/entrepreneurship.webp",
     description:
       "We facilitate the establishment of thriving enterprises that generate employment, create competitive products and services, and possess the competency to compete globally.",
   },

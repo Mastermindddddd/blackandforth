@@ -1,8 +1,8 @@
 import React from "react";
-import HeroBg from "../../assets/website/hero2.jpg";
-import { Link } from "react-router-dom";
+import HeroBg from "../../assets/website/hero2.webp";
 
 const Hero2 = () => {
+  
   return (
     <section
       className="relative min-h-screen flex items-center justify-center sm:justify-start bg-cover bg-center px-4 sm:px-6 md:px-16 lg:px-24"

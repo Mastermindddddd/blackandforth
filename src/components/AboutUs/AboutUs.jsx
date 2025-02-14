@@ -1,6 +1,6 @@
 import React from "react";
-import AboutImg from "../../assets/website/growth.png"; // Replace with your actual About Us image path
-import FullWidthImg from "../../assets/website/banner.png"; // Replace with the uploaded image path
+import AboutImg from "../../assets/website/growth.webp"; // Replace with your actual About Us image path
+import FullWidthImg from "../../assets/website/banner.webp"; // Replace with the uploaded image path
 
 const AboutUs = () => {
   return (
