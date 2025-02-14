@@ -13,13 +13,11 @@ const Menu = [
 const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Function to handle smooth scrolling with offset
   const handleScroll = (event, targetId) => {
     event.preventDefault();
-    setIsOpen(false); // Close mobile menu after clicking
+    setIsOpen(false);
 
     if (!targetId.startsWith("#")) {
-      // If it's an actual page route, navigate normally
       window.location.href = targetId;
       return;
     }
@@ -37,30 +35,28 @@ const Navbar2 = () => {
   };
 
   return (
-    <div className="navbar shadow-md fixed w-full bg-white z-50">
-      <div className="container mx-auto flex justify-between items-center px-6">
-        {/* Logo section */}
+    <div className="navbar shadow-md fixed w-full bg-white z-50 h-14 flex items-center">
+      <div className="container mx-auto flex justify-between items-center px-4">
+        
         <div data-aos="fade-down" data-aos-once="true">
-          <a href="/" className="font-bold text-2xl sm:text-3xl flex items-center gap-2 tracking-wider">
-            <img src={Logo} alt="Logo" className="w-24 sm:w-28 h-auto" />
+          <a href="/" className="font-bold text-xl sm:text-2xl flex items-center gap-2 tracking-wider">
+            <img src={Logo} alt="Logo" className="w-10 sm:w-14 h-auto" />
           </a>
         </div>
 
-        {/* Hamburger Menu for Small Screens */}
         <div className="sm:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-2xl focus:outline-none">
             {isOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
 
-        {/* Desktop Menu */}
         <ul className="hidden sm:flex items-center gap-4">
           {Menu.map((menu) => (
             <li key={menu.id}>
               <a
                 href={menu.link}
                 onClick={(e) => handleScroll(e, menu.link)}
-                className="text-md py-2 px-4 text-gray-900 duration-200 cursor-pointer"
+                className="text-md py-2 px-3 text-gray-900 duration-200 cursor-pointer"
               >
                 {menu.name}
               </a>
@@ -69,7 +65,6 @@ const Navbar2 = () => {
         </ul>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="sm:hidden bg-white shadow-md absolute w-full left-0 top-14 py-2 px-6">
           <ul className="flex flex-col items-start gap-2">
