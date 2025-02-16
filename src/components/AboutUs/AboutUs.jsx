@@ -73,6 +73,7 @@ const AboutUs = () => {
               <div className="bg-white p-4 shadow-lg rounded-lg">
                 <img
                   src={AboutImg}
+                  loading="lazy"
                   alt="About Us"
                   className="rounded-lg w-full md:w-[110%] lg:w-[120%] transition-all duration-300 ease-in-out"
                 />
@@ -86,6 +87,7 @@ const AboutUs = () => {
       <section className="w-full">
         <img
           src={FullWidthImg} // Replace with the uploaded image path
+          loading="lazy"
           alt="Company Banner"
           className="w-full object-cover"
         />

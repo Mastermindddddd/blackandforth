@@ -8,6 +8,7 @@ const AboutUs2 = () => {
         <div className="w-full md:w-1/2">
           <img
             src="/AboutUs2.jpeg"
+            loading="lazy"
             alt="Professional Working"
             className="w-full rounded-lg shadow-lg"
           />

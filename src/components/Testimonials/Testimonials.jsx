@@ -11,6 +11,7 @@ const Testimonials = () => {
         <div className="w-80 md:w-96">
           <img
             src="/smh_12.png"
+            loading="lazy"
             alt="Testimonial 1"
             className="w-full h-auto"
           />
@@ -20,6 +21,7 @@ const Testimonials = () => {
         <div className="w-80 md:w-96">
           <img
             src="/smh_13.png"
+            loading="lazy"
             alt="Testimonial 2"
             className="w-full h-auto"
           />

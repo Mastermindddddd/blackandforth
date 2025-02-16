@@ -42,6 +42,7 @@ const Introduction = () => {
       {/* Full-width Banner Image */}
       <img 
         src="/banner.png" 
+        loading="lazy"
         alt="Invest in Growth Banner"
         className="w-full object-cover max-h-80 sm:max-h-96 md:max-h-[500px] lg:max-h-[600px]"
       />

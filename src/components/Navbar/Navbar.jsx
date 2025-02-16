@@ -41,7 +41,7 @@ const Navbar = () => {
         
         <div data-aos="fade-down" data-aos-once="true">
           <a href="/" className="font-bold text-xl sm:text-2xl flex items-center gap-2 tracking-wider">
-            <img src={Logo} alt="Logo" className="w-10 sm:w-14 h-auto" />
+            <img src={Logo} loading="lazy" alt="Logo" className="w-10 sm:w-14 h-auto" />
           </a>
         </div>
 

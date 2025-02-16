@@ -15,7 +15,7 @@ const ServicesSection = () => {
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             }`}
           >
-            <img src={service.image} alt={service.title} className="w-full sm:w-3/5 md:w-1/3 rounded-lg" />
+            <img src={service.image} loading="lazy" alt={service.title} className="w-full sm:w-3/5 md:w-1/3 rounded-lg" />
             <div className="md:ml-6 md:mr-6 mt-6 md:mt-0 text-center md:text-left px-4 sm:px-10">
               <h3 className="text-lg sm:text-xl font-bold">{service.title}</h3>
               <p className="text-gray-700 text-sm sm:text-base mt-2">{service.description}</p>
