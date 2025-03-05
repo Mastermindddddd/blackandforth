@@ -2,30 +2,41 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero.jsx";
 import AboutUs from "../components/AboutUs/AboutUs.jsx";
-import Services from "../components/Services/Services.jsx";
-import Industries from "../components/Industries/Industries.jsx";
-import Testimonials from "../components/Testimonials/Testimonials.jsx";
-import ContactForm from "../components/ContactForm/ContactForm.jsx";
+import GuidingPrinciples from "../components/GuidingPrinciples/GuidingPrinciples.jsx";
+import EngagementModel from "../components/EngagementModel/EngagementModel.jsx";
+import BusinessConsultingSolutions from "../components/BusinessConsultingSolutions/BusinessConsultingSolutions.jsx";
+import BusinessCoachingSolutions from "../components/BusinessCoachingSolutions/BusinessCoachingSolutions.jsx";
+import HrConsultingSolutions from "../components/HrConsultingSolutions/HrConsultingSolutions.jsx";
+import DeliveryManagement from "../components/DeliveryManagement/DeliveryManagement.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <Hero />
-      <section id="about" className="pt-18">
+      <section id="about-us" className="pt-18">
         <AboutUs />
       </section>
-      <section id="services" className="pt-18">
-        <Services />
+      <section id="principles" className="pt-18">
+        <GuidingPrinciples />
       </section>
-      <section id="industries" className="pt-18">
-        <Industries />
+      <section id="engagement-model" className="pt-18">
+        <EngagementModel />
       </section>
-      <section id="testimonials" className="pt-18">
-        <Testimonials />
+      <section id="business-consulting" className="pt-18">
+        <BusinessConsultingSolutions />
       </section>
-      <section id="contact" className="pt-18">
-        <ContactForm />
+      <section id="business-coaching" className="pt-18">
+        <BusinessCoachingSolutions />
+      </section>
+      <section id="hr-consulting" className="pt-18">
+        <HrConsultingSolutions />
+      </section>
+      <section id="delivery-management" className="pt-18">
+        <DeliveryManagement />
+      </section>
+      <section id="track-record" className="pt-18">
+        <Footer />
       </section>
     </div>
   );

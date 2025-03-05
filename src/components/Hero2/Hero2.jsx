@@ -1,26 +1,31 @@
 import React from "react";
-import HeroBg from "../../assets/website/hero2.webp";
+import { Link } from "react-router-dom";
+import Navbar2 from "../Navbar2/Navbar2";
 
 const Hero2 = () => {
-  
   return (
-    <section
-      className="relative min-h-screen flex items-center justify-center sm:justify-start bg-cover bg-center px-4 sm:px-6 md:px-16 lg:px-24"
-      style={{ backgroundImage: `url(${HeroBg})` }}
-    >
-      <div className="max-w-2xl text-center sm:text-left p-6 sm:p-8 rounded-lg">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-primary leading-tight">
-          Eliashib Foundation
-        </h1>
-        <div className="mt-8 sm:mt-12">
-          <a href="#contact-us">
-            <button className="px-6 py-3 bg-secondary text-white font-semibold text-md rounded-full shadow-lg transition-transform transform hover:scale-105">
-            Contact Us
-            </button>
-          </a>
+    <div className="relative w-full h-screen">
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/foundation-hero.png')" }}></div>
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      
+      {/* Navbar */}
+      <Navbar2 />
+      
+      {/* Hero Content */}
+      <div className="absolute inset-0 flex items-center justify-start p-8 md:p-16">
+        <div className="max-w-lg text-white">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+            Breaking down barriers to create thriving societies.
+          </h1>
+          <button className="mt-12 bg-teal-700 text-white px-6 py-3 rounded-full hover:bg-teal-600 w-full">
+            CONTACT US
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,31 +1,45 @@
 import React from "react";
 import Navbar2 from "../components/Navbar2/Navbar2";
-import ContactForm from "../components/ContactForm/ContactForm.jsx";
 import Hero2 from "../components/Hero2/Hero2.jsx";
-import Introduction from "../components/Introduction/Introduction.jsx";
 import AboutUs2 from "../components/AboutUs2/AboutUs2.jsx";
-import InfoCards from "../components/InfoCards/InfoCards.jsx";
-import ServicesSection from "../components/Services2/Services2.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import Banner from "../components/Banner/Banner.jsx";
+import WhoWeServe from "../components/WhoWeServe/WhoWeServe.jsx";
+import OurPromises from "../components/OurPromises/OurPromises.jsx";
+import SkillsDevelopment from "../components/SkillsDevelopment/SkillsDevelopment.jsx";
+import SkillsSection from "../components/SkillsSection/SkillsSection.jsx";
+import EntrepreneurshipDevelopment from "../components/EntrepreneurshipDevelopment/EntrepreneurshipDevelopment.jsx";
+import ResearchDevelopment from "../components/ResearchAndDevelopment/ResearchAndDevelopment.jsx";
+
 
 const Foundation = () => {
   return (
     <div>
       <Navbar2 />
       <Hero2 />
-      <section id="introduction" className="pt-18">
-        <Introduction />
-      </section>
-      <section id="about" className="pt-18">
+      <section id="foundation-about" className="pt-18">
         <AboutUs2 />
       </section>
-      <section id="info" className="pt-18">
-        <InfoCards />
+      <section id="banner" className="pt-18">
+        <Banner />
       </section>
-      <section id="services" className="pt-18">
-        <ServicesSection />
+      <section id="Who-we-serve" className="pt-18">
+        <WhoWeServe />
       </section>
-      <section id="contact-us" className="pt-18">
-        <ContactForm />
+      <section id="our-promises" className="pt-18">
+        <OurPromises />
+      </section>
+      <section id="skills-development" className="pt-18">
+        <SkillsDevelopment />
+      </section>
+      <section id="skill-section" className="pt-18">
+        <SkillsSection />
+      </section>
+      <section id="entrepreneurship-development" className="pt-18">
+        <EntrepreneurshipDevelopment />
+      </section>
+      <section id="research-development" className="pt-18">
+        <ResearchDevelopment />
       </section>
     </div>
   );

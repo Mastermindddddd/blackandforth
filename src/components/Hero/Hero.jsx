@@ -1,34 +1,35 @@
 import React from "react";
-import HeroBg from "../../assets/website/hero.webp";
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 const Hero = () => {
   return (
-    <section
-      className="relative min-h-screen flex flex-col sm:flex-row items-center justify-center sm:justify-start bg-cover bg-center px-4 md:px-10 lg:px-24 py-12 sm:py-20"
-      style={{ backgroundImage: `url(${HeroBg})` }}
-    >
-      <div className="max-w-2xl p-6 sm:p-10 rounded-lg text-center sm:text-left">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-primary leading-tight">
-          Welcome to <br />
-          <span className="text-secondary">Eliashib Group</span>
-        </h1>
+    <div className="relative w-full h-screen">
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hero.png')" }}></div>
 
-        <p className="text-sm sm:text-lg md:text-xl text-gray-800 mt-4">
-          Your trusted partner in <strong>strategic</strong> investments and{" "}
-          <strong>innovative</strong> solutions across multiple sectors. We are committed to sustainable{" "}
-          <strong>growth</strong>, leveraging our expertise to <strong>empower</strong> businesses and drive value.
-        </p>
+      {/* Navbar */}
+      <Navbar />
 
-        <div className="mt-6">
-          <Link to="/foundation">
-            <button className="px-5 sm:px-6 py-2 sm:py-3 bg-secondary text-white font-semibold text-md sm:text-lg rounded-full shadow-lg transition-transform transform hover:scale-105">
-              Foundation
+      {/* Hero Content - Positioned Left */}
+      <div className="absolute inset-0 flex items-center justify-start px-8 md:px-16">
+        {/* Shadow + Text Wrapper */}
+        <div className="relative flex items-center">
+          {/* Semi-Transparent Dark Rounded Shadow */}
+          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 bg-black bg-opacity-40 w-[380px] h-[380px] rounded-full blur-2xl"></div>
+
+          {/* Text Content */}
+          <div className="relative max-w-lg text-white z-10">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight font-poppins">
+              Your strategic partner in navigating the complexities of today’s business landscape to ensure future readiness.
+            </h1>
+            <button className="mt-6 bg-teal-600 text-white px-6 py-3 rounded-full hover:bg-teal-700">
+              CONTACT US
             </button>
-          </Link>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

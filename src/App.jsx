@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 // Lazy load pages
 const Home = React.lazy(() => import("./pages/Home"));
 const Foundation = React.lazy(() => import("./pages/Foundation"));
+const ContactUs = React.lazy(() => import("./pages/ContactUs"));
 
 const App = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/foundation" element={<Foundation />} />
+            <Route path="/contact-us" element={<ContactUs />}/>
           </Routes>
         </Suspense>
       </div>
