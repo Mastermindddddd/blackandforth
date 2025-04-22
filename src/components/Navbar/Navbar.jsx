@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const location = useLocation();
@@ -18,12 +19,16 @@ const Navbar = () => {
 
         {/* Center Links */}
         <ul className="hidden md:flex space-x-12 text-base text-gray-800 font-medium">
-          <li><Link to="/about-us" className="hover:text-blue-600">About us</Link></li>
-          <li><Link to="/services" className="hover:text-blue-600">Services</Link></li>
-          <li><Link to="/case-studies" className="hover:text-blue-600">Case Studies</Link></li>
-          <li><Link to="/blog" className="hover:text-blue-600">Blog</Link></li>
-          <li><Link to="/how-it-works" className="hover:text-blue-600">How it Works</Link></li>
-          <li><Link to="/hire" className="hover:text-blue-600">Hire</Link></li>
+          <li>
+            <HashLink smooth to="/#about-us" className="hover:text-blue-600">
+              About us
+            </HashLink>
+          </li>
+          <li><Link to="" className="hover:text-blue-600">Services</Link></li>
+          <li><Link to="" className="hover:text-blue-600">Case Studies</Link></li>
+          <li><Link to="" className="hover:text-blue-600">Blog</Link></li>
+          <li><Link to="" className="hover:text-blue-600">How it Works</Link></li>
+          <li><Link to="" className="hover:text-blue-600">Hire</Link></li>
         </ul>
 
         {/* Contact Us Button aligned right */}
