@@ -13,7 +13,7 @@ const Navbar = () => {
           <img
             src="/umoja-gas-logo.png"
             alt="Umoja Gas Logo"
-            className="h-20 object-contain"
+            className="h-28 object-contain"
           />
         </Link>
 
