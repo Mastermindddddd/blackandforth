@@ -7,25 +7,29 @@ const Hero = () => {
     <div className="relative w-full h-screen">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/Landing-Page.png')" }}
+        className="absolute inset-0 bg-center bg-no-repeat md:bg-cover bg-cover"
+        style={{
+          backgroundImage: "url('/Landing-Page.png')",
+          backgroundPosition: "center center",
+        }}
       ></div>
 
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Content */}
-      <div className="absolute inset-0 flex items-center justify-start px-12 md:px-16 ml-20 mt-24">
-        <div className="bg-black bg-opacity-20 rounded-md p-14 max-w-2xl w-full z-10 text-white font-bold leading-snug">
-          <p className="text-[32px] md:text-[38px]">
+      <div className="absolute inset-0 flex items-center justify-center md:justify-start px-6 sm:px-10 md:px-16">
+        <div className="bg-black bg-opacity-20 rounded-md p-6 sm:p-10 md:p-14 w-full max-w-md sm:max-w-xl md:max-w-2xl z-10 text-white font-bold leading-snug mt-10 md:mt-24 md:ml-20 text-center md:text-left">
+          <p className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px]">
             🔧 Site Under Construction
           </p>
-          <p className="text-[30px] md:text-[36px]">
-            We're getting ready to serve<br />you better!
+          <p className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[36px]">
+            We're getting ready to serve<br className="hidden md:block" />
+            you better!
           </p>
           <Link
             to="/contact-us"
-            className="inline-block mt-20 bg-orange-400 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-4 rounded-md"
+            className="inline-block mt-10 sm:mt-14 md:mt-20 bg-orange-400 hover:bg-orange-600 text-white text-sm font-semibold px-6 py-3 rounded-md"
           >
             Contact Us
           </Link>

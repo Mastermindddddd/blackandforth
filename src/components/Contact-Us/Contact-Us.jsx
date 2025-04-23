@@ -78,22 +78,23 @@ const ContactUs = () => {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-gray-300 text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center px-6 py-4">
+      <div className="border-t border-gray-300 text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center px-4 sm:px-6 py-4 text-center md:text-left space-y-2 md:space-y-0">
         <p>© 2025 Umoja Gas. All rights reserved.</p>
-        <div className="flex space-x-4 mt-2 md:mt-0">
-          <a href="#" className="hover:underline">
-            Privacy Policy
-          </a>
-          <span className="text-gray-400">|</span>
-          <a href="#" className="hover:underline">
-            Terms & Conditions
-          </a>
-          <span className="text-gray-400">|</span>
-          <a href="#" className="hover:underline">
-            Cookie Policy
-          </a>
-        </div>
+         <div className="flex flex-wrap justify-center md:justify-start space-x-2 sm:space-x-4 mt-2 md:mt-0">
+            <a href="#" className="hover:underline">
+              Privacy Policy
+            </a>
+              <span className="text-gray-400 hidden sm:inline">|</span>
+            <a href="#" className="hover:underline">
+              Terms & Conditions
+            </a>
+              <span className="text-gray-400 hidden sm:inline">|</span>
+            <a href="#" className="hover:underline">
+              Cookie Policy
+            </a>
+          </div>
       </div>
+
     </div>
   );
 };
