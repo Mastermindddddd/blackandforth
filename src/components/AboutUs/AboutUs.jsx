@@ -13,12 +13,12 @@ const AboutUs = () => {
           ></div>
 
             <h2 className="text-3xl md:text-4xl font-poppins text-gray-900">
-              ABOUT <span className="text-black font-bold">US</span>
+              About <span className="text-black font-bold">US</span>
             </h2>
           </div>
 
           {/* Subtitle */}
-          <p className="text-center text-black max-w-4xl mx-auto mt-6 font-poppins text-md leading-relaxed text-justify">
+          <p className="text-center text-gray-500 max-w-4xl mx-auto mt-6 font-poppins text-md leading-relaxed text-justify">
             Our website is currently under construction, but we’re still hard at work — delivering gas safely and reliably to homes, restaurants, hotels, and businesses across the region.
           </p>
         </div>

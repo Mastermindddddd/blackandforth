@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero.jsx";
 import AboutUs from "../components/AboutUs/AboutUs.jsx";
 import GuidingPrinciples from "../components/GuidingPrinciples/GuidingPrinciples.jsx";
 import ContactUs from "../components/Contact-Us/Contact-Us.jsx";
+import WhyUmojaGas from "../components/WhyUmojaGas/WhyUmojaGas.jsx";
 
 const Home = () => {
   return (
@@ -11,6 +12,9 @@ const Home = () => {
       <Hero />
       <section id="about-us" className="pt-18">
         <AboutUs />
+      </section>
+      <section id="why-us" className="pt-18">
+        <WhyUmojaGas />
       </section>
       <section id="principles" className="pt-18">
         <GuidingPrinciples />

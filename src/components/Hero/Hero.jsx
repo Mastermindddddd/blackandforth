@@ -19,13 +19,9 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex items-center justify-center md:justify-start px-6 sm:px-10 md:px-16">
-        <div className="bg-black bg-opacity-20 rounded-md p-6 sm:p-10 md:p-14 w-full max-w-md sm:max-w-xl md:max-w-2xl z-10 text-white font-bold leading-snug mt-10 md:mt-24 md:ml-20 text-center md:text-left">
-          <p className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px]">
-            🔧 Site Under Construction
-          </p>
-          <p className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[36px]">
-            We're getting ready to serve<br className="hidden md:block" />
-            you better!
+        <div className="bg-black bg-opacity-20 rounded-md p-6 sm:p-10 md:p-14 w-full max-w-md sm:max-w-xl md:max-w-xl z-10 text-white font-extrabold leading-snug mt-10 md:mt-24 md:ml-20 text-center md:text-left">
+          <p className="text-[24px] sm:text-[28px] md:text-[38px] lg:text-[42px] font-extrabold">
+            Welcome to Umoja Gas - Your trusted <br/>LPG Delivery Partner
           </p>
           <Link
             to="/contact-us"
