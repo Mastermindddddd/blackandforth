@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_nctwyzr",    
+        "template_36xq2uk",   
+        formRef.current,
+        "oobQZLsNAxb8Yck8T"      
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <div className="bg-[#f6f8fb] text-gray-900 font-poppins">
-      <div className="container max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between gap-12 ">
-        {/* Left Contact Info */}
+      <div className="container max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row justify-between gap-12">
+        {/* Left Contact Info (same as before) */}
         <div className="md:w-1/2">
           <h3 className="text-lg font-semibold mb-2">💬 Stay Connected</h3>
           <p className="text-gray-700 mb-6">
@@ -41,73 +65,55 @@ const ContactUs = () => {
           <hr className="border-gray-300" />
         </div>
 
+
         {/* Right Contact Form */}
         <div className="md:w-1/2 bg-white border border-gray-500 p-6 shadow-sm">
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <form
-  action="https://formspree.io/f/your_form_id"
-  method="POST"
-  className="space-y-4"
->
-  <div className="flex flex-col md:flex-row gap-4">
-    <input
-      type="text"
-      name="firstName"
-      placeholder="First name"
-      className="w-full border rounded px-3 py-2"
-      required
-    />
-    <input
-      type="text"
-      name="lastName"
-      placeholder="Last name"
-      className="w-full border rounded px-3 py-2"
-      required
-    />
-  </div>
-  <input
-    type="email"
-    name="email"
-    placeholder="Email address"
-    className="w-full border rounded px-3 py-2"
-    required
-  />
-  <textarea
-    name="message"
-    placeholder="Message"
-    rows={3}
-    className="w-full border rounded px-3 py-2"
-    required
-  ></textarea>
-  <button
-    type="submit"
-    className="bg-[#f77b5e] hover:bg-[#f96644] text-white font-semibold px-6 py-2 rounded-full"
-  >
-    Proceed
-  </button>
-</form>
-
+          <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+            <div className="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First name"
+                className="w-full border rounded px-3 py-2"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last name"
+                className="w-full border rounded px-3 py-2"
+                required
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email address"
+              className="w-full border rounded px-3 py-2"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows={3}
+              className="w-full border rounded px-3 py-2"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-[#f77b5e] hover:bg-[#f96644] text-white font-semibold px-6 py-2 rounded-full"
+            >
+              Proceed
+            </button>
+          </form>
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Footer (same as before) */}
       <div className="border-t border-gray-300 text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center px-4 sm:px-6 py-4 text-center md:text-left space-y-2 md:space-y-0">
-        <p>© 2025 Umoja Gas. All rights reserved.</p>
-         <div className="flex flex-wrap justify-center md:justify-start space-x-2 sm:space-x-4 mt-2 md:mt-0">
-            <a href="#" className="hover:underline">
-              Privacy Policy
-            </a>
-              <span className="text-gray-400 hidden sm:inline">|</span>
-            <a href="#" className="hover:underline">
-              Terms & Conditions
-            </a>
-              <span className="text-gray-400 hidden sm:inline">|</span>
-            <a href="#" className="hover:underline">
-              Cookie Policy
-            </a>
-          </div>
+        {/* ... your footer ... */}
       </div>
-
     </div>
   );
 };

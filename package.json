@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@remix-run/dev": "^2.15.3",
     "@remix-run/react": "^2.15.3",
     "aos": "^2.3.4",
