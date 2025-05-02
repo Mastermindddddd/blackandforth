@@ -11,7 +11,7 @@ const Navbar = () => {
         {/* Logo on the far left */}
         <Link to="/" className="flex items-center space-x-2">
           <img
-            src="/umoja-gas-logo.png"
+            src="/umoja-gas-logo.webp"
             alt="Umoja Gas Logo"
             className="h-28 object-contain"
           />
@@ -32,7 +32,9 @@ const Navbar = () => {
               </HashLink>
             </li>
             <li>
-              <Link to="" className="hover:text-blue-600">Services</Link>
+              <HashLink smooth to="/#why-us" className="hover:text-blue-600">
+                Services
+              </HashLink>
             </li>
             <li>
               <Link to="" className="hover:text-blue-600">How it Works</Link>

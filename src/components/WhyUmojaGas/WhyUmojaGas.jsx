@@ -66,8 +66,8 @@ const WhyUmojaGas = () => {
         </div>
 
         {/* Bottom Vertical Lines */}
-        <div className="absolute bottom-[146px] left-[33.3%] w-[2px] h-6 bg-pink-500 hidden md:block"></div>
-        <div className="absolute bottom-[146px] left-[66.6%] w-[2px] h-6 bg-pink-500 hidden md:block"></div>
+        <div className="absolute bottom-[162px] left-[33.3%] w-[2px] h-6 bg-pink-500 hidden md:block"></div>
+        <div className="absolute bottom-[162px] left-[66.6%] w-[2px] h-6 bg-pink-500 hidden md:block"></div>
 
         {/* Bottom Row */}
         <div className="mt-12 flex flex-col md:flex-row md:justify-center md:gap-12">

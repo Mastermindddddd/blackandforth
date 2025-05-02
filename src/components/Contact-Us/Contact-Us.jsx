@@ -44,36 +44,49 @@ const ContactUs = () => {
         {/* Right Contact Form */}
         <div className="md:w-1/2 bg-white border border-gray-500 p-6 shadow-sm">
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <form className="space-y-4">
-            <div className="flex flex-col md:flex-row gap-4">
-              <input
-                type="text"
-                placeholder="First name"
-                className="w-full border rounded px-3 py-2"
-              />
-              <input
-                type="text"
-                placeholder="Last name"
-                className="w-full border rounded px-3 py-2"
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="Email address"
-              className="w-full border rounded px-3 py-2"
-            />
-            <textarea
-              placeholder="Message"
-              rows={3}
-              className="w-full border rounded px-3 py-2"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#f77b5e] hover:bg-[#f96644] text-white font-semibold px-6 py-2 rounded-full"
-            >
-              Proceed
-            </button>
-          </form>
+          <form
+  action="https://formspree.io/f/your_form_id"
+  method="POST"
+  className="space-y-4"
+>
+  <div className="flex flex-col md:flex-row gap-4">
+    <input
+      type="text"
+      name="firstName"
+      placeholder="First name"
+      className="w-full border rounded px-3 py-2"
+      required
+    />
+    <input
+      type="text"
+      name="lastName"
+      placeholder="Last name"
+      className="w-full border rounded px-3 py-2"
+      required
+    />
+  </div>
+  <input
+    type="email"
+    name="email"
+    placeholder="Email address"
+    className="w-full border rounded px-3 py-2"
+    required
+  />
+  <textarea
+    name="message"
+    placeholder="Message"
+    rows={3}
+    className="w-full border rounded px-3 py-2"
+    required
+  ></textarea>
+  <button
+    type="submit"
+    className="bg-[#f77b5e] hover:bg-[#f96644] text-white font-semibold px-6 py-2 rounded-full"
+  >
+    Proceed
+  </button>
+</form>
+
         </div>
       </div>
 

@@ -5,7 +5,7 @@ const GuidingPrinciples = () => {
   return (
     <div className="bg-white py-16 px-6 md:px-16 lg:px-32">
       {/* Heading */}
-      <div className="text-center mb-20">
+     {/*} <div className="text-center mb-20">
         <div
           className="w-16 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r"
           style={{ backgroundImage: "linear-gradient(to right, #F76680, #57007B)" }}
@@ -13,7 +13,7 @@ const GuidingPrinciples = () => {
         <h2 className="text-2xl md:text-3xl text-gray-900 font-poppins">
           OUR GUIDING <span className="font-bold text-black">PRINCIPLES</span>
         </h2>
-      </div>
+      </div>*/}
 
       {/* Main Container */}
 <div className="max-w-5xl mx-auto px-4 text-left">
@@ -29,8 +29,7 @@ const GuidingPrinciples = () => {
   </Link>
 
   {/* Principle Section */}
-  <div className="mt-20">
-    {/* Title with Fire Icon */}
+  {/*<div className="mt-20">
     <div
       className="w-16 h-1 mb-6 rounded-full bg-gradient-to-r"
       style={{ backgroundImage: "linear-gradient(to right, #F76680, #57007B)" }}
@@ -44,10 +43,10 @@ const GuidingPrinciples = () => {
   </div>
 
 
-        {/* Description */}
+        
         <p className="text-gray-700 font-poppins">
           From small homes to big hotels — we deliver clean energy with care, speed, and professionalism.
-        </p>
+        </p>*/}
       </div>
     </div>
   );
