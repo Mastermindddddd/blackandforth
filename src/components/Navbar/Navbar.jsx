@@ -37,7 +37,9 @@ const Navbar = () => {
               </HashLink>
             </li>
             <li>
-              <Link to="" className="hover:text-blue-600">How it Works</Link>
+              <HashLink smooth to="/#How-it-works" className="hover:text-blue-600">
+                How it works
+              </HashLink>
             </li>
           </ul>
 

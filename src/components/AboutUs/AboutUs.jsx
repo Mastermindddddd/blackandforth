@@ -18,7 +18,7 @@ const AboutUs = () => {
           </div>
 
           {/* Subtitle */}
-          <p className="text-center text-gray-500 max-w-4xl mx-auto mt-6 font-poppins text-md leading-relaxed text-justify">
+          <p className="text-center tOur website is currently under construction, but we’re still hard at work — delivering gas safely and reliably to homes, restaurants, hotels, and businesses across the region.ext-gray-500 max-w-4xl mx-auto mt-6 font-poppins text-md leading-relaxed text-justify">
           Reliable LPG Delivery, Right to Your Doorstep. Whether you’re a homeowner, restaurant, hotel, hospital, or business, Umoja Gas brings safe, high-quality LPG cylinders straight to you- fast, friendly, and on time.
           </p>
         </div>
