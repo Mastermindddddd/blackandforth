@@ -1,34 +1,49 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import emailjs from "@emailjs/browser";
 
 const ContactSupport = () => {
   const formRef = useRef();
+  const [successMsg, setSuccessMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_nctwyzr",     
-        "template_36xq2uk",   
+        "service_nctwyzr",
+        "template_36xq2uk",
         formRef.current,
-        "oobQZLsNAxb8Yck8T"  
+        "oobQZLsNAxb8Yck8T"
       )
       .then(
-        (result) => {
-          alert("Message sent successfully!");
+        () => {
+          setSuccessMsg("✅ Message sent successfully!");
+          setErrorMsg("");
           formRef.current.reset();
         },
-        (error) => {
-          alert("Failed to send message. Please try again.");
+        () => {
+          setErrorMsg("❌ Failed to send message. Please try again.");
+          setSuccessMsg("");
         }
       );
   };
 
+  useEffect(() => {
+    if (successMsg || errorMsg) {
+      const timer = setTimeout(() => {
+        setSuccessMsg("");
+        setErrorMsg("");
+      }, 8000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMsg, errorMsg]);
+
   return (
     <div>
       <Navbar />
+
       <div className="min-h-screen flex items-center justify-center bg-white px-4">
         <div className="max-w-5xl w-full bg-white p-10">
           {/* Header */}
@@ -40,7 +55,6 @@ const ContactSupport = () => {
             </p>
           </div>
 
-          {/* Main Content */}
           <div className="grid md:grid-cols-2 gap-10">
             {/* Left - Form */}
             <div className="bg-gray-100 p-6">
@@ -90,9 +104,21 @@ const ContactSupport = () => {
                   ></textarea>
                 </div>
 
+                {/* Success or Error Message */}
+                {successMsg && (
+                  <div className="p-3 bg-green-100 border border-green-400 text-green-700 rounded">
+                    {successMsg}
+                  </div>
+                )}
+                {errorMsg && (
+                  <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+                    {errorMsg}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 text-white font-semibold p-3 transition"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold p-3 rounded transition"
                 >
                   Send Message
                 </button>
@@ -132,8 +158,9 @@ const ContactSupport = () => {
           </div>
         </div>
       </div>
+
+      {/* Map Section */}
       <div className="w-full">
-        {/* Map Image Section */}
         <div className="h-[350px] w-full">
           <img
             src="/Joburg-map.png"
